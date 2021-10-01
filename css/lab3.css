@@ -43,7 +43,7 @@ body {
     text-align: center;
 }
 
-@media screen and (min-width: 1280px)  {
+@media screen and (max-width: 1280px)  {
     div p {
         font-size: 40px;
         margin-top: 17px;
