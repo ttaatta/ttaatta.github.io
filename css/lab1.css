@@ -1,0 +1,11 @@
+body {
+    background-color: whitesmoke;
+}
+
+div h2 {
+    text-align: center;
+}
+
+a[href] {
+    color: rgb(2, 143, 112);
+}
