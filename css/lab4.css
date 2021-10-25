@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script&display=swap');
+
+html {
+    height: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Bad Script', 'Marck Script';
+    user-select: none;
+}
+
+body {
+    font-size: larger;
+    background: linear-gradient(to top left, #f0bb80, #7409c7);
+}
+
+p {
+    text-align: center;
+    font-weight: bold;
+    font-style: inherit;
+    font-size: 300%;
+    margin-top: 3%;
+    text-shadow: 0 0 10px rgb(70, 0, 35);
+}
+
+a.ss_1 {
+    text-decoration: none;
+    padding: 20px;
+    color: rgb(207, 3, 88);
+    font-size: 100%;
+}
+
+a.ss_1:hover {
+    background: opacity: 100%;
+    color:  white;
+}
+
+button {
+    vertical-align: middle;
+    position: relative;
+    font-style:inherit;
+    margin-top: 3%;
+    box-shadow: 0 0 10px whitesmoke;
+    font-size: 180%;
+}
+
+.animate-gradient {
+	display: inline-block;
+    height: 70px;
+	line-height: 70px;
+    border: none;
+	border-radius: 50px;
+	padding: 10px;
+    width: 15%;
+	text-align: center;
+	color: #FFFFFF;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: animate_gradient 5s ease infinite;
+    cursor: pointer;
+    margin-left: 42.725%;
+    margin-bottom: 10px;
+
+}
+.animate-gradient:hover {
+	animation: none;
+}
+ 
+@keyframes animate_gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.kaff {
+    font-family: 'Marck Script';
+    color:rgb(3, 238, 238);
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+    font-style: normal;
+    margin-top: 1%;
+    margin-left: 38.725%;
+    text-decoration: none;
+    text-shadow: 0 0 10px rgb(0, 92, 92);
+
+}
+
+#serce {
+    position: relative;
+    width: 220px;
+    height: 100px;
+    margin-top: 5%;
+    margin-left: 45.725%;
+}
+#serce:before,
+#serce:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: red;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#serce:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
