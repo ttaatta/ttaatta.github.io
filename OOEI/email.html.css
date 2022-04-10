@@ -3,11 +3,12 @@ div {
     float: left;
     position: relative;
     width: 31.335%;
+    height: 30%;
     padding-bottom: 31.335%;
     margin: 1%;        
-}
+} 
 div:hover {
-    background: black;
+    background: #2c3838;
 }
 img {
     position: absolute;
