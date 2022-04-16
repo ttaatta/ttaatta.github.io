@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ua">
+<link rel = "shortcut icon" type = "image/x-icon" href = "https://ttaatta.github.io/favicon.ico?">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Lab 3 </title>
+    <link rel="stylesheet" href="https://ttaatta.github.io/OOEI/lab3.css">
+</head>
+
+<body>
+    <div id="page">
+        <h1> Таблиця первісних і невизначених інтегралів </h1>
+        <div id="table">
+            <table>
+                <tr>
+                    <td width="66%" colspan = "2"> 
+                        <h2> Таблиця первісних </h2> 
+                    </td>
+                    <td width="33%" rowspan="2"> 
+                        <h2> Таблиця невизначених інтегралів </h2> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h2> <b> Функція </b> f(x) </h2> 
+                    </td>
+                    <td> 
+                        <h2> <b> Первісні </b> F(x) + C </h2> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3>$$ 0 $$</h3> 
+                    </td>
+                    <td> 
+                        <h3>$$ C $$</h3>
+                    </td>
+                    <td> 
+                        <h3> $${\int} 0 dx = C$$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$1$$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$x+C$$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $${\int}dx = x + C$$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$ x^n (n &#8800 -1) $$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$ {{x^{n+1}}\over {n+1}}+C $$ </h3>
+                    </td>
+                     <td> 
+                        <h3> $${\int} x^n dx = \frac {x^{n+1}}{n+1} + C, n &#8800 -1 $$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$\frac{1}{x}$$</h3> 
+                    </td>
+                    <td> 
+                        <h3> $$ln|x|+C $$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $$ {\int} \frac {dx}{x} = ln|x| + C $$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$sin x$$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$-cos x + C$$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $$ {\int} sin x dx = - cos x +C $$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$cos x$$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$sin x + C$$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $$ {\int} cos x dx = sin x + C $$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$\frac {1}{cos^2 x} $$ </h3> 
+                    </td>
+                    <td > 
+                        <h3> $$tg x + C$$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $$ {\int} \frac {dx}{cox^2 x} = tg x + C $$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$\frac {1}{sin^2 x} $$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$-ctg x + C$$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $$ {\int} \frac {dx}{sin^2 x} = -ctg x + C $$ </h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$e^x$$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$e^x + C$$ </h3>
+                    </td>
+                    <td> 
+                        <h3> $$ {\int} e^x dx = e^x + C $$</h3> 
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$a^x$$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$\frac {a^x}{ln a} + C $$ </h3>
+                    </td>                 
+                    <td> 
+                        <h3> $$ {\int} a^x dx = \frac {a^x}{ln a} + C $$ </h3> 
+                    </td>     
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$\frac {1}{1+x^2} $$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$ arctg x + C $$ or $$ -arcctg x + C $$ </h3>
+                    </td>
+               
+                    <td> 
+                        <h3> $$ {\int} \frac {dx}{1+x^2} = \begin{cases} arctg x + C, \\ -arcctg x + C \end{cases} $$</h3> 
+                    </td> 
+                </tr>
+                <tr>
+                    <td> 
+                        <h3> $$ \frac {1}{\sqrt{1-x^2}} $$ </h3> 
+                    </td>
+                    <td> 
+                        <h3> $$arcsin x + C$$ or $$-arccos c + C$$ </h3>
+                    </td>
+
+                    <td> 
+                        <h3> $$ {\int} \frac {dx}{\sqrt{1-x^2}} = \begin{cases} arcsin x + C, \\ -arccos x + C \end{cases} $$ </h3> 
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+      </script>
+      <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+      </script>
+</body>
+</html>
