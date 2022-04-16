@@ -1,0 +1,45 @@
+html{
+    background-image: url(https://top-fon.com/uploads/posts/2021-07/thumbs/1627058770_35-p-svetlo-rozovii-fon-abstraktsiya-35.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#page{
+    background-color: #efc9c9;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    float: left;
+    position: center;
+    width: 70%;
+    margin: 15%;
+    margin-top: 5%;
+    margin-left: 15%;
+    height: 100%;
+    margin-block-end: 5%;
+}
+body{
+    background-color: #e4e4e4;
+    color: #2d344b;
+}
+table{
+    background-color: #e9e9e9;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-block-end: 5%;
+    float: center;
+    position: relative;
+    border: dashed #deafa7 3px;
+    border-collapse: collapse;
+}
+#table{
+    height: 50%;
+    float: left;
+    position: relative;
+}
+tr, td{
+    padding: 5px;
+    border: dashed #deafa7 3px;
+}
