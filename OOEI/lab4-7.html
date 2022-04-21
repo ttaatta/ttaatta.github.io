@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> LAB 4-7 </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="lab4-7.css">
+
+<script category="text/javascript">
+    function loadXML(file) {
+        try {
+            var req = new XMLHttpRequest();
+            req.open("GET", file, false);
+            req.send(null);
+            return req.responseXML;
+        }
+        catch (e) {
+            try {
+                var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+                xmlDoc.async = false;
+                xmlDoc.load(file);
+                return xmlDoc;
+            }   
+            catch (e) {
+                alert(e.message);
+                return null;
+            }
+        }
+    } 
+</script>
+</head>
+<body>
+    <div class="box">
+        <a name="Maincoon" onmouseover="choose(this)"
+        style="color: blue"> Cats Maincoon</a> <br /> 
+        <a name="British" onmouseover="choose(this)"
+        style="color: green">British Cats</a> <br /> 
+        <a name="Siamese" onmouseover="choose(this)"
+        style="color: rgb(73, 0, 128)">Siamese Cats</a> <br/> 
+    </div>
+
+    <div id="data">
+        <center>
+            <br />
+            <div>
+                <div name="niname0" id="niname0"> </div>
+                <div name="age0" id="age0"> </div>
+                <div name="weight0" id="weight0"> </div>
+            </div>
+            <br/><br/>
+            <div>
+                <div name="niname1" id="niname1"> </div>
+                <div name="age1" id="age1"> </div>
+                <div name="weight1" id="weight1"> </div>
+            </div>
+            <br/><br/>
+            <div>
+                <div name="niname2" id="niname2"> </div>
+                <div name="age2" id="age2"> </div>
+                <div name="weight2" id="weight2"> </div>
+            </div>
+            <br/><br/>
+            <div>
+                <div name="niname3" id="niname3"> </div>
+                <div name="age3" id="age3"> </div>
+                <div name="weight3" id="weight3"> </div>
+            </div>
+            <br/>
+        </center>
+    </div>
+
+    <script category="text/javascript">
+
+        var xmlDoc = loadXML("https://github.com/ttaatta/ttaatta.github.io/blob/main/OOEI/lab4-7.xml");
+
+        function choose(coloredLink) {
+            var group = coloredLink.name;
+            var categoryCounter = 0;
+            var divNum = 4; 
+
+            for (var i = 0; i < xmlDoc.getElementsByTagName("cat").length; i++) {
+                
+                var niname = "niname" + index;
+                var age = "age" + index;
+                var weight = "weight" + index;
+                var data = document.getElementById("data");
+
+                if (xmlDoc.getElementsByTagName("cat")
+                [i].attributes.getNamedItem("group").nodeValue == group) { 
+
+                    document.getElementById(niname).innerHTML = xmlDoc.getElementsByTagName("niname")[i].childNodes[0].nodeValue;
+                    document.getElementById(age).innerHTML = xmlDoc.getElementsByTagName("age")[i].childNodes[0].nodeValue;
+                    document.getElementById(weight).innerHTML = xmlDoc.getElementsByTagName("weight")[i].childNodes[0].nodeValue;
+                    
+                    index++;
+
+                    data.style.fontFamily = "Arial, Helvetica, sans-serif";
+                    data.style.borderRadius = "0px 0px 20px 20px";
+                    data.style.transition = ".4s linear";
+
+                    if(group == "Maincoon") {
+                        data.style.backgroundColor = "yellow";
+                        data.style.boxShadow = "0px 6px 4px azure";
+                    }
+
+                    if(group == "British") {
+                        data.style.backgroundColor = "green";
+                        data.style.boxShadow = "0px 6px 4px khaki";
+                    }
+
+                    if(group == "Siamese") {
+                        data.style.backgroundColor = "pink";
+                        data.style.boxShadow = "0px 5px 15px novajowhie";
+                    }
+                } 
+            }
+
+                for (var temp = index; temp < divNum; temp++) {
+                    niname = "niname" + temp;
+                    age = "age" + temp;
+                    weight = "weight" + temp;
+                    
+                    document.getElementById(niname).innerHTML = "";
+                    document.getElementById(age).innerHTML = "";
+                    document.getElementById(weight).innerHTML = "";
+                }
+
+            }  
+    </script>
+</body>
+</html>
