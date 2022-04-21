@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cats>
+    <cat group="Мейнкун">
+        <name> Rizik </name>
+        <age> 1</age>
+        <weight> 7</weight>
+    </cat>
+    <cat group="Мейнкун">
+        <name> Barsik </name>
+        <age> 2</age>
+        <weight> 10 </weight>
+    </cat>
+    <cat group="Мейнкун">
+        <name> Roodolf </name>
+        <age> 3 </age>
+        <weight> 1 </weight>
+    </cat>
+    <cat group="Британець">
+        <name> Persefona </name>
+        <age> 6</age>
+        <weight> 5 </weight>
+    </cat>
+    <cat group="Британець">
+        <name> Gorge </name>
+        <age> 5 </age>
+        <weight> 3 </weight>
+    </cat>
+    <cat group="Британець">
+        <name> Serhio </name>
+        <age> 2</age>
+        <weight> 4 </weight>
+    </cat>
+    <cat group="Сиамський">
+        <name> Murka </name>
+        <age> 1 </age>
+        <weight> 1 </weight>
+    </cat>
+    <cat group="Сиамський">
+        <name> Murzik </name>
+        <age> 3 </age>
+        <weight> 5 </weight>
+    </cat>
+    <cat group="Сиамський">
+        <niname> Thomas </name>
+        <age> 5 </age>
+        <weight> 3 </weight>
+    </cat>
+</cats>
