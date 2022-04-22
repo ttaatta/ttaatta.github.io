@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link rel = "shortcut icon" type = "image/x-icon" href = "https://ttaatta.github.io/favicon.ico?">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB 4-7</title>
+<script category = "text/javascript">
+
+function loadXML(file) {
+ try {
+ // firefox, mozilla, opera, IE7/8 etc... 
+ var req = new XMLHttpRequest();
+ req.open("GET", file, false);
+ req.send(null);
+ return req.responseXML;
+ }
+ catch (e) {
+ try {
+ // internet explorer 4/5/6
+ var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+ xmlDoc.async = false;
+ xmlDoc.load(file);
+ return xmlDoc;
+ }
+ catch (e) {
+ alert(e.message);
+ return null;
+}
+}
+}
+
+</script>
+
+<link rel="stylesheet" href="lab4-7.css">
+</head>
+<body>
+    <div class="box">
+        <a name="Main"  onmouseover="choose(this)" style="color: #45536d;"> Maincoons </a> <br /> 
+        <a name="Bri"  onmouseover="choose(this)" style="color: #45536d;" > British cats </a> <br /> 
+        <a name="Siam"  onmouseover="choose(this)" style="color: #45536d;"> Siamese cats </a> <br /> 
+    </div>
+    
+    <div id="data" style="color: #45536d;">
+        <br /> 
+        <div >
+            <div name="name0" id="name0"></div>
+            <div name="sex0" id="sex0"></div>
+            <div name="age0" id="age0"></div>
+        </div>
+        <br /> <br />
+        <div>
+            <div name="name1" id="name1"></div>
+            <div name="sex1" id="sex1"></div>
+            <div name="age1" id="age1"></div>
+        </div>
+        <br /> <br />
+        <div>
+            <div name="name2" id="name2"></div>
+            <div name="sex2" id="sex2"></div>
+            <div name="age2" id="age2"></div>
+        </div>
+        <br /> 
+    </div>
+    
+    <script category="text/javascript">
+    
+    var xmlDoc = loadXML("https://ttaatta.github.io/cats.xml");
+    
+    function choose(coloredLink) {
+     var group = coloredLink.name;
+     var index = 0;
+     var divNum = 3; 
+    
+     for (var i = 0; i < xmlDoc.getElementsByTagName("cat").length; i++) {
+    
+     var name = "name" + index;
+     var sex = "sex" + index;
+     var age = "age" + index;
+     var data = document.getElementById('data');
+    
+     if (xmlDoc.getElementsByTagName("cat")
+     [i].attributes.getNamedItem("group").nodeValue == group) { 
+    
+    
+     document.getElementById(name).innerHTML = xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue;
+     document.getElementById(sex).innerHTML = xmlDoc.getElementsByTagName("sex")[i].childNodes[0].nodeValue;
+     document.getElementById(age).innerHTML = xmlDoc.getElementsByTagName("age")[i].childNodes[0].nodeValue;
+    
+     index++;
+     
+     data.style.fontFamily = "'Bad Script'";
+     data.style.borderRadius = "10px 10px 10px 10px";
+     data.style.transition =  ".4s linear";
+    
+       if (group == "Main") {
+         data.style.backgroundColor = "#deafa7";
+         data.style.boxShadow = "0 10px 20px rgb(222, 175, 167, 0.75)";}
+    
+       if (group == "Bri") {
+         data.style.backgroundColor = "#c1ffc1";
+         data.style.boxShadow = "0px 10px 20px rgb(193, 255, 193, 0.75)";}
+    
+       if (group == "Siam") {
+         data.style.backgroundColor = "#deafa7";
+         data.style.boxShadow = "0px 10px 20px rgb(222, 175, 167, 0.75)"}
+    
+     }
+    
+    }
+    
+     for (var temp = index; temp < divNum; temp++) {
+    
+     name = "name" + temp;
+     sex = "sex" + temp;
+     age = "age" + temp;
+    
+     document.getElementById(name).innerHTML = "";
+     document.getElementById(sex).innerHTML = "";
+     document.getElementById(category).innerHTML = "";
+    
+     }
+    
+    }
+    </script>
+</body>
+</html>
