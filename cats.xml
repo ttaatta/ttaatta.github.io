@@ -1,47 +1,52 @@
 <cats> 
     <cat group="Main">
         <name>  Джордж </name>
-        <sex> male </sex>
-        <age> 3 </age>
+        <sex> кіт </sex>
+        <age> 3 роки </age>
     </cat>
     <cat group="Main">
         <name> Стефан </name>
-        <sex> male </sex>
-        <age> 7 </age>
+        <sex> кіт </sex>
+        <age> 7 років </age>
     </cat>
     <cat group="Main">
         <name> Ізабелла </name>
-        <sex> female </sex>
-        <age> 5,7 </age>
+        <sex> кішка </sex>
+        <age> 6 місяців </age>
     </cat>
     <cat group="Bri">
         <name> Ізадора </name>
-        <sex> female </sex>
-        <age> 1,3 </age>
+        <sex> кішка </sex>
+        <age> 1,5 роки </age>
     </cat>
     <cat group="Bri">
         <name> Генрі </name>
-        <sex> male </sex>
-        <age> 9 </age>
+        <sex> кіт </sex>
+        <age> 9 років </age>
     </cat>
     <cat group="Bri">
         <name> Коул </name>
-        <sex> male </sex>
-        <age> 5 </age>
+        <sex> кіт </sex>
+        <age> 5 років </age>
     </cat>
     <cat group="Bri">
         <name> Кіара </name>
-        <sex> female </sex>
-        <age> 4 </age>
+        <sex> кішка </sex>
+        <age> 4 роки </age>
     </cat>
     <cat group="Siam">
         <name> Дороті </name>
-        <sex> female </sex>
-        <age> 0,7 </age>
+        <sex> кішка </sex>
+        <age> 7 місяців </age>
     </cat>
     <cat group="Siam">
         <name> Томас </name>
-        <sex> male </sex>
-        <age> 5,3 </age>
+        <sex> кіт </sex>
+        <age> 5 років </age>
+    </cat>
+    <cat group="Siam">
+        <name> Альфред </name>
+        <sex> кіт </sex>
+        <age> 3 роки </age>
     </cat>
 </cats>
