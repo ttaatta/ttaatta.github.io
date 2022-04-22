@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>LAB 4-7</title>
-<script category = "text/javascript">
+<script type="text/javascript">
 
 function loadXML(file) {
  try {
@@ -34,13 +34,13 @@ function loadXML(file) {
 <link rel="stylesheet" href="lab4-7.css">
 </head>
 <body>
-    <div class="box">
-        <a name="Main"  onmouseover="choose(this)" style="color: #45536d;"> Maincoons </a> <br /> 
-        <a name="Bri"  onmouseover="choose(this)" style="color: #45536d;" > British cats </a> <br /> 
-        <a name="Siam"  onmouseover="choose(this)" style="color: #45536d;"> Siamese cats </a> <br /> 
+    <div class="breeds">
+        <a name="Main"  onmouseover="showSelectedCategory(this)" style="color: #45536d;"> Maincoons </a> <br /> 
+        <a name="Bri"  onmouseover="showSelectedCategory(this)" style="color: #45536d;" > British cats </a> <br /> 
+        <a name="Siam"  onmouseover="showSelectedCategory(this)" style="color: #45536d;"> Siamese cats </a> <br /> 
     </div>
     
-    <div id="data" style="color: #45536d;">
+    <div id="info" style="color: #45536d;">
         <br /> 
         <div >
             <div name="name0" id="name0"></div>
@@ -62,21 +62,20 @@ function loadXML(file) {
         <br /> 
     </div>
     
-    <script category="text/javascript">
+    <script type="text/javascript">
     
     var xmlDoc = loadXML("https://ttaatta.github.io/cats.xml");
     
-    function choose(coloredLink) {
+    function showSelectedCategory(coloredLink) {
      var group = coloredLink.name;
-     var index = 0;
+     var categoryCounter = 0;
      var divNum = 3; 
     
      for (var i = 0; i < xmlDoc.getElementsByTagName("cat").length; i++) {
     
-     var name = "name" + index;
-     var sex = "sex" + index;
-     var age = "age" + index;
-     var data = document.getElementById('data');
+     var name = "name" + categoryCounter;
+     var sex = "sex" + categoryCounter;
+     var age = "age" + categoryCounter;
     
      if (xmlDoc.getElementsByTagName("cat")
      [i].attributes.getNamedItem("group").nodeValue == group) { 
@@ -86,40 +85,39 @@ function loadXML(file) {
      document.getElementById(sex).innerHTML = xmlDoc.getElementsByTagName("sex")[i].childNodes[0].nodeValue;
      document.getElementById(age).innerHTML = xmlDoc.getElementsByTagName("age")[i].childNodes[0].nodeValue;
     
-     index++;
+     categoryCounter++;
      
-     data.style.fontFamily = "'Bad Script'";
-     data.style.borderRadius = "10px 10px 10px 10px";
-     data.style.transition =  ".4s linear";
+     info.style.fontFamily = "'Bad Script'";
+     info.style.borderRadius = "10px 10px 10px 10px";
+     info.style.transition =  ".4s linear";
     
        if (group == "Main") {
-         data.style.backgroundColor = "#deafa7";
-         data.style.boxShadow = "0 10px 20px rgb(222, 175, 167, 0.75)";}
+         info.style.backgroundColor = "#deafa7";
+         info.style.boxShadow = "0 10px 20px rgb(222, 175, 167, 0.75)";}
     
        if (group == "Bri") {
-         data.style.backgroundColor = "#c1ffc1";
-         data.style.boxShadow = "0px 10px 20px rgb(193, 255, 193, 0.75)";}
+         info.style.backgroundColor = "#c1ffc1";
+         info.style.boxShadow = "0px 10px 20px rgb(193, 255, 193, 0.75)";}
     
        if (group == "Siam") {
-         data.style.backgroundColor = "#deafa7";
-         data.style.boxShadow = "0px 10px 20px rgb(222, 175, 167, 0.75)"}
+         info.style.backgroundColor = "#deafa7";
+         info.style.boxShadow = "0px 10px 20px rgb(222, 175, 167, 0.75)"}
     
      }
     
     }
     
-     for (var temp = index; temp < divNum; temp++) {
+     for (var temp = categoryCounter; straggler < divNum; straggler++) {
     
-     name = "name" + temp;
-     sex = "sex" + temp;
-     age = "age" + temp;
+     name = "name" + straggler;
+     sex = "sex" + straggler;
+     age = "age" + straggler;
     
      document.getElementById(name).innerHTML = "";
      document.getElementById(sex).innerHTML = "";
      document.getElementById(category).innerHTML = "";
     
      }
-    
     }
     </script>
 </body>
