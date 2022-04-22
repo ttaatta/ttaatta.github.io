@@ -12,7 +12,7 @@ body{
     background-attachment: fixed;
     background-size: cover;
 }
-#data {
+#info {
     text-align: center;
     text-decoration-color: #45536d;
     margin-left: 30%;
@@ -24,7 +24,7 @@ body{
     line-height: 100%;
 }
 
-.box {
+.breeds {
     width: 40%;
     margin-left: 30%;
     display: flex;
@@ -35,7 +35,7 @@ body{
     border-radius: 10px 10px 10px 10px;
    
 }
-.box a {
+.breeds a {
     font-size: 200% ;
     font-weight: 400px;
     padding: 3%;
