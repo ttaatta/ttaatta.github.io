@@ -12,6 +12,12 @@ html{
     margin-top: 5%;
 }
 #fun {
+    background-image: url(coo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    
     width: 80%;
     height: 600px;
     margin-top: 2%;
