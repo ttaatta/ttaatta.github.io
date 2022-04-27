@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SVG</title>
+    <link rel="stylesheet" href="lab8.css">
+</head>
+<body>
+    <div id="header">
+        <h1> Потягни за будь-яку кульку </h1>
+    </div>
+
+
+    <div align="center">  
+        <svg id="fun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" clip-rule="evenodd" fill-rule="evenodd" image-rendering="optimizeQuality" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+            <g dominant-baseline="central" transform="translate(100 100)">
+                <path id="line" d="M-50 200 C 60 10, 240 200 350 0"/>
+        
+                <circle id="circles" cx="-50" cy="200" r="8" align="center"/>
+                <circle id="circles" cx="60" cy="60" r="8" align="center"/>
+                <circle id="circles" cx="240" cy="150" r="8" align="center"/>
+                <circle id="circles" cx="350" cy="0" r="8" align="center"/>
+            </g>
+        </svg>
+    </div>  
+    <script src="lab8.js"></script>
+</body>
+</html>
